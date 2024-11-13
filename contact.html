@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <style>
+        .contact-container{
+            background: #1341a4;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+        .contact-left{
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 20px; 
+        }
+
+        .contact-left-title h2{
+            font-weight: 600;
+            color: #d9d9d9;
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+        .contact-left-title hr{
+            border: none;
+            width: 120px;
+            height: 5px;
+            background-color: #a363aa;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .contact-iputs{
+            background-color: #dddddd;
+            width: 400px;
+            height: 50px;
+            border: none;
+            outline: none;
+            padding-left: 25px;
+            font-weight: 500;
+            color: #666;
+            border-radius: 50px;
+        }
+        .contact-left textarea{
+            height: 140px;
+            padding-top: 15px;
+            border-radius: 20px;
+        }
+        .contact-iputs:focus{
+            border: 2px solid #ff994f;
+        }
+        .contact-iputs::placeholder{
+            color: #a9a9a9;
+        }
+        .contact-left button{
+            display: flex;
+            align-items: center;
+            padding: 15px 30px;
+            font-size: 16px;
+            color: #fff;
+            gap: 10px;
+            border: none;
+            border-radius: 50px;
+            background: linear-gradient(270deg, #ff994f, #fa6d86);
+            cursor: pointer;
+        }
+
+        @media (max-width:800px){
+            .contact-container{
+                height: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 30px;
+                align-items: center;
+                padding: 10px;
+            }
+            .contact-iputs{
+                width: 80vw;
+            }
+        }
+
+
+        .contact-right{
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            align-items: start;
+            gap: 55px; 
+            
+        }
+        .social-login-icon{
+            width: 20px;
+            height: 20px;
+        }
+        .cont-a{
+            color: #fff;
+            width: 250px;
+            text-decoration: none;
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            justify-content: space-between;
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+            outline: none;
+            font-weight: 500;
+            background: #00931b;
+            border-radius: 50px;
+        }
+        .cont-a:hover{
+            background: #007716;
+        }
+
+    </style>
+
+
+<ul class="contact-info">
+    <li> <small><ion-icon name="call-outline"></ion-icon> : 0768 786 675</small> </li>
+    <li> <small><ion-icon name="mail-outline"></ion-icon> : wizogeneralenterprises@gmail.com</small> </li>
+    <li> <small><ion-icon name="location-outline"></ion-icon> : Moi Avenue Mombasa</small> </li>
+   
+</ul>
+<!-----HEADER-->
+<header>
+
+<div class="navbar">
+    <div class="logo"><a href="#">WEB DEV</a></div>
+    <ul class="links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="index.html">About</a></li>
+        <li><a href="">Contact</a></li>
+    </ul>
+    <div class="toogle-btn">
+        <img src="images/MenuIcon.png">
+    </div>
+</div>
+<div class="dropdown-menu">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="index.html">About</a></li>
+    <li><a href="#">Contact</a></li>
+</div>
+</header>
+
+    <div class="contact-container">
+        <form action="https://api.web3forms.com/submit" method="POST" class="contact-left">
+            <div class="contact-left-title">
+                <h2>Send Us An Email</h2>
+                <hr>
+            </div>
+            <input type="hidden" name="access_key" value="df91fb99-de30-4c18-96c1-74d176e6bd87">
+            <input type="text" name="name" placeholder="Your Name" class="contact-iputs" required>
+            <input type="email" name="email" placeholder="Your Email" class="contact-iputs" required>
+            <textarea name="message" placeholder="Your Message" class="contact-iputs" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+
+        <div class="contact-right"> 
+            <div class="contact-left-title">
+                <h2>OR Talk To Us</h2>
+                <hr>
+            </div>
+            <a class="cont-a" href="https://wa.me/+254113697897"><ion-icon name="logo-whatsapp" class="social-login-icon"></ion-icon> Chat Via Whatsapp</a>
+            <a class="cont-a" href="tel: 0113697897"><ion-icon name="call-outline" class="social-login-icon"></ion-icon> Call Us Directly</a> 
+            <a class="cont-a" href="https://wa.me/+254113697897"><ion-icon name="call-outline" class="social-login-icon"></ion-icon> Call Us Directly</a> 
+        </div>
+
+    </div>
+
+<script src="script.js"></script> 
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
